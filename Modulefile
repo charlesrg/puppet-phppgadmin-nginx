@@ -1,0 +1,8 @@
+name 'phppgadmin-nginx'
+version '0.0.1'
+source 'git://github.com/kleinmann/puppet-phppgadmin-nginx.git'
+author 'Uwe Kleinmann'
+description 'phpPgAdmin with nginx vhost'
+summary 'phpPgAdmin with nginx vhost'
+license 'BSD'
+project_page 'https://github.com/kleinmann/puppet-phppgadmin-nginx'

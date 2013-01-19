@@ -1,0 +1,5 @@
+#/usr/bin/env bash
+# Requires fpm (effing package manager)
+
+# To be run in a directory with var/www/phppgadmin under it.
+fpm -s dir -t deb --provides phppgadmin -m "John Doe <john@example.com>" -a all --deb-user www-data --deb-group www-data -n phppgadmin -v 5.0.4 .
