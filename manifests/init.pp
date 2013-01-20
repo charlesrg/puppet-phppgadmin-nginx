@@ -4,6 +4,7 @@ class phppgadmin(
   $pg_server_host = 'localhost',
   $pg_server_port = 5432,
 ) {
+  # TODO: Change to arrays, so that multiple servers can be used.
 
   package { 'php5-pgsql':
     ensure => present,
