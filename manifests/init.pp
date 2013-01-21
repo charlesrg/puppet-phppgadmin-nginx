@@ -15,22 +15,17 @@ class phppgadmin(
     ensure   => present,
     name     => 'phppgadmin',
     provider => 'dpkg',
-    source   => '/opt/debs/phppgadmin_5.0.4_all.deb',
+    source   => '/tmp/phppgadmin_5.0.4_all.deb',
     require  => File['phppgadmin-package'],
-  }
-
-  file { '/opt/debs':
-    ensure => 'directory',
   }
 
   file { 'phppgadmin-package':
     ensure  => 'present',
-    path    => '/opt/debs/phppgadmin_5.0.4_all.deb',
+    path    => '/tmp/phppgadmin_5.0.4_all.deb',
     owner   => 'root',
     group   => 'root',
     mode    => 0644,
     source  => 'puppet:///modules/phppgadmin/phppgadmin_5.0.4_all.deb',
-    require => File['/opt/debs'],
   }
 
   file { 'phppgadmin-nginx-vhost':
